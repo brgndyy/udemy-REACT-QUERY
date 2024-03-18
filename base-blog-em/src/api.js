@@ -6,9 +6,11 @@ export async function fetchPosts(pageNum = 1) {
 }
 
 export async function fetchComments(postId) {
+  console.log(postId);
   const response = await fetch(
     `https://jsonplaceholder.typicode.com/comments?postId=${postId}`
   );
+  console.log("데이터 요청 실행");
   return response.json();
 }
 
